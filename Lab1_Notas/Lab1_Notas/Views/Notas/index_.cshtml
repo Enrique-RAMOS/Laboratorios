@@ -1,0 +1,48 @@
+﻿@model Lab1_Notas.Models.Acciones
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 class="titulo" >Registro De Notas</h1>
+
+<div class="color">
+<form asp-controller="Notas" asp-action="index_"> 
+    <div class="card"> 
+<label>Nombre</label>
+ <input type="text" asp-for="nombre"  placeholder="Nombre"  class="form-control" />
+ <hr />
+
+
+ <label>Laboratorio 1</label>
+ <input type="number" asp-for="lab1" placeholder="Ingresa Nota"  class="form-control" min="0" max="10"/>
+
+  <label>Parcial 1</label>
+ <input type="number" asp-for="par1" placeholder="Ingresa Nota"   class="form-control" min="0" max="10"/>
+   <hr />
+    <label>laboratorio 2</label>
+ <input type="number" asp-for="lap2" placeholder="Ingresa Nota"  class="form-control" min="0" max="10"/>
+  <hr />
+  <label>Parcial 2</label>
+ <input type="number" asp-for="par2" placeholder="Ingresa Nota"   class="form-control" min="0" max="10"/>
+   <hr />
+   <label> Laboratorio 3</label>
+ <input type="number" asp-for="lap3" placeholder="Ingresa Nota"  class="form-control" min="0" max="10"/>
+ <hr />
+
+   <label>Parcial 3</label>
+ <input type="number" asp-for="par3" placeholder="Ingresa Nota"  class="form-control" min="0" max="10"/>
+  <hr />
+ 
+
+<button  class="btn btn-danger">Promedio</button>
+<label> resultado</label>
+<textarea class="area" >@ViewBag.variableaenviar</textarea>
+
+
+</div>
+</form>
+
+</div>
