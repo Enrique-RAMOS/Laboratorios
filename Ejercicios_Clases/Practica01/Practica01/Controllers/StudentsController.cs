@@ -30,16 +30,34 @@ namespace Practica01.Controllers
             return View(listarestudiante);
         }
 
+        public IActionResult actu(Estudiantes es) {
+
+            Estudiante.UpdateStudents(es);
+            return RedirectToAction("Index");
+
+        }
+
+
+        public IActionResult Guardar() { 
+
+            
+        
+            return View();
+        }
+
+        public IActionResult Save(Estudiantes es) {
+
+            Estudiante.AddStudents(es);
+            return RedirectToAction("Index");
+
+        }
+
+       
         public IActionResult Index()
         {
-            //Estudiantes  es = new Estudiantes();
-            //es.Id = 3;
-            //es.Name = "Marlon";
-            //es.LastName = "Martinez";
-            ////Estudiante.UpdateStudents(es);//
-            //  Estudiante.GetAll();
+           
             var listar = Estudiante.GetAll();
-            //ViewBag.listar= Estudiante.GetAll();
+           
             return View(listar);
         }
         [HttpPost]
